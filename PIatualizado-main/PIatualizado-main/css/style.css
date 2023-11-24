@@ -1,0 +1,690 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,600&family=Montserrat:wght@100;300&family=PT+Sans&family=Quicksand:wght@300&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*--------------------------------------------PÁGINA INICIAL------------------------------------------------------------*/
+
+/* CABEÇALHO */
+
+.cabecalho{ 
+    display:flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    padding: 0.5vh 1vh;
+}
+
+#inicio-cabecalho{
+    font-weight: bold;
+}
+
+#botao-meus-eventos {
+    color:#B127D9;
+    border-color:#70008f;
+}
+
+svg{
+    margin-bottom: 2.5px;
+    margin-right: 4px;
+}
+
+#botao-meus-eventos:hover, svg:hover{
+    color:white;
+    background-color: #70008f;
+    border-color: white;
+}
+
+
+.menu-navegacao, li{
+    display: inline;
+    margin-left: 24px;
+    cursor:pointer;
+    list-style: none;
+}
+
+li:hover{
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.cadastro-inicio {
+    background-color: #B127D9;
+    color: white;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.login-inicio{
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+
+/* CARROSSEL DE SLIDES */
+
+.carousel-inner{
+    margin-top: 15px;
+}
+
+/*PRINCIPAIS EVENTOS*/
+
+.eventos{
+    display: flex;
+    margin-top: 18px;
+    justify-content: center;
+    margin-bottom: 40px;
+    background-image: url('../img/fundo1.jpg');
+    padding: 40px 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    
+}
+
+.eventos-titulo{
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: black;
+    font-weight: bold;
+}
+
+.eventos-single{
+    background-color: white;
+    width: 20%;
+    margin-right: 2%;
+    padding:40px 20px;
+    font-size: 20px;
+    cursor:pointer;
+    border-radius: 6px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.eventos-single:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.nome-evento{
+    font-weight: bold;
+}
+
+/*PERFIL ADMINISTRADOR*/
+
+.perfil-admin{
+    background-image: url(../img/Admin2.png);
+    background-size:auto;
+    height: 62vh; 
+    display: flex;
+    border-radius: 70px;
+    margin-left: 3vh;
+    margin-right: 3vh;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.Anuncie{
+    font-weight: bold;
+    color: white;
+    margin-top: 10px;
+}
+
+.texto-admin{
+    display: flex;
+    flex-direction: column;
+    margin-top: 8vh;
+    text-align: center;
+    margin-left: 7vh;
+}
+
+.Desc-anuncie{
+    margin-top: 5vh;
+    color: white;
+}
+
+.botao-adm{
+    margin-top: 9vh;
+    background-color: #3c004d;
+    color: white;
+    border-radius: 30px;
+    padding: 9px;
+    font-size: 20px;
+    height: fit-content;
+    width: max-content;
+    margin-left: 50vh;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.botao-adm:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+/*RODAPÉ - FOOTER*/
+
+footer {
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    color: #fff;
+    padding: 30px 0;
+    margin-top: 15vh;
+    flex-direction: row;
+}
+
+.duvidas{
+    color: white;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-bottom: 1.5vh;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.redes{
+    align-items: center;
+    position: relative;
+    margin-bottom: 1.5vh;
+}
+
+/*--------------------------------------------MINHAS RESERVAS-----------------------------------------------------------*/
+
+#botao-meus-eventos2 {
+    color:white;
+    background-color: #70008f;
+    border-color: white;
+}
+
+.titulo-carrinho-ingressos{
+    color:#70008f;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 3.5vh;
+}
+
+.carrinho-ingressos{
+    width:100%;
+    border-collapse: collapse;
+}
+
+
+tr{
+    border-bottom: 0.5px solid #ccc;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    color: #aaa;
+    font-weight: bold;
+}
+
+th{
+    text-align: left;
+    color: black;
+}
+
+
+/*--------------------------------------------Lista de Eventos----------------------------------------------------------*/
+
+.lista-eventos{
+    text-align: center;
+    margin-top: 4.5vh;
+    margin-bottom: 3.5vh;
+    color: black;
+}
+
+.grid-container {
+    background-image: url(../img/fundo1.jpg);
+    text-align: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Define 3 colunas igualmente espaçadas */
+    grid-gap: 10px; /* Espaçamento entre os itens */
+    display:grid;
+    justify-content: center;
+  }
+
+.grid-item{
+    margin-top: 5vh;
+    background-color: white;
+    width: 50vh;
+    height: 35vh;
+    margin-right: 5%;
+    margin-left: 15%;
+    padding:30px 15px;
+    font-size: 20px;
+    cursor:pointer;
+    border-radius: 6px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    margin-bottom: 5vh;
+}
+
+.grid-item:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+#eventos-cabecalho{
+    font-weight: bold;
+}
+
+/*--------------------------------------------Sobre Nós----------------------------------------------------------*/
+
+#sobre-cabecalho{
+    font-weight: bold;
+}
+
+.sobre-nos{
+    text-align: center;
+    margin-top: 4.5vh;
+    margin-bottom: 7vh;
+}
+
+.sobre-titulo{
+    margin-bottom: 3vh;
+    color:#3c004d;
+    font-weight: bold;
+}
+
+
+.mvv{
+    text-align: center;
+    color: black;
+}
+
+.accordion{
+    width: 100%;
+    
+    margin-top: 7vh;
+    
+}
+
+.accordion-button{
+    background-color: #B127D9;
+    color: white;
+}
+
+.accordion-button:hover{
+    background-color: #B127D9;
+    color: white;
+}
+
+.img-sobre-nos{
+    display: flex;
+    flex-direction: row;
+    margin-left: 25%;
+    margin-right: 25%;
+    justify-content: center;
+    margin-top: 10vh;
+}
+
+.foto-sobre{
+    margin-left: 5px;
+}
+
+/*---------------------------------TELA LOGIN--------------------------------------------------------*/
+
+:root {
+    --color-white: #FFFFFF;
+    --color-purple-200: #8C31E0;
+    --color-purple-100: #D695E2;
+    --color-purple-90: #C88DF5;
+}
+
+.logo {
+    width: 160px;
+    height: 50px;
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 20px;
+    color: white;
+}
+
+.h2Dois {
+    font-size: 12px;
+    color: black;
+}
+
+.h2Dois:hover {
+    font-size: 12px;
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+h3 {
+    color: var(--color-white);
+    font-size: 25px;
+    margin-right: 5%;
+    margin-top: 5%;
+    color: var(--color-white);
+}
+
+.h3Dois {
+    color: var(--color-white);
+    margin-left: 17vh;
+    margin-bottom: 4vh;
+}
+
+
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/fundo1.jpg);
+    background-repeat: no-repeat;
+}
+
+#dadosLogin_form {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 80px;
+    border-radius: 12px;
+    gap: 30px;
+    height: fit-content;
+    justify-content: center;
+}
+
+#form_header {
+    display: flex;
+    align-items: center;
+}
+
+#inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.input-box {
+    font-size: 14px;
+    color: black;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 3px;
+    cursor: text;
+    border-bottom: 1px solid var(--color-purple-200);
+    margin-top: 1vh;
+}
+
+.input-field input {
+    border: none;
+    background-color: transparent;
+    width: 260px;
+    font-size: 15px;
+    padding: 0px 5px;
+    color: white;
+}
+
+.input-field input:focus {
+    outline: none;
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.meuBotao {
+    padding: 8px 17px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(223, 173, 244);
+    color:#70008f;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.meuBotao:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+    color:black;
+}
+
+.meuBotaoDois {
+    padding: 10px 15px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(223, 173, 244);
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin-left: 45px;
+    transition: background-color 0.3s;
+    margin-left: 20px;
+}
+
+.meuBotaoDois:hover {
+    background-color: rgb(63,19,98);
+    color: white;
+}
+
+/*----------------------------------------------TELA DO EVENTO------------------------------------------------*/
+
+.Descricao{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #9B53D4;
+    width: 100vw;
+    height: 70vh;
+    color: white; 
+    text-align: center; 
+    line-height: 30px; 
+    position: relative;
+    top: -20px;
+}
+
+.Botao_verde{
+    background-color: #4CAF50;
+    color: black;
+    border: none;    
+    padding: 15px 32px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50px;
+    position: absolute;
+    top: 90%;
+    left: 45%;
+    }
+
+.Botao_verde:hover {
+    background-color: #b3ffb5; /* Nova cor de fundo quando o mouse passa sobre o botão */
+}
+
+.Data{
+    line-height: 10px;
+    position:relative;
+    left: -35%;
+}
+
+.Hora{
+    position:relative;
+    left: -22%;
+}
+    
+.Nome{
+    line-height: 60px;
+}
+
+/*---------------------------------------DADOS DO USUARIO--------------------------------------------------------*/
+
+.Botao {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 10px;
+    top: 40%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  .Menu {
+    display: flex;
+    gap: 2rem;
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .Visualizacao {
+    background-color: white;
+    color: #9b53d4;
+    border: 2px solid #9b53d4;
+    padding: 10px 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 30px;
+  }
+  .Visualizacao:hover {
+    background-color: #543071;
+    color: white;
+  }
+  
+  .Dados {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .DadosGeral {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 100px;
+    align-items: flex-start;
+  }
+  .CamposDados1 {
+    display: flex;
+    align-items: center;
+  }
+  
+  .CamposDados2 {
+    width: 1px;
+    height: 300px;
+    background-color: #9b53d4;
+    margin: 0 50px;
+    margin-top: -50px;
+    justify-content: center;
+  }
+  
+  .CamposDados1_1,
+  .CamposDados1_2 {
+    margin: auto;
+    text-align: left;
+  }
+  
+  .CamposDados1_1 input,
+  .CamposDados1_2 input {
+    margin: 100px 120px;
+    padding: 5px;
+    width: 300px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #9b53d4;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: -70px;
+    margin-left: 122px;
+  }
+  
+  .barra_roxa {
+    width: 100%;
+    height: 50px;
+    background-color: #9b53d4;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .barra_roxa2,
+  .barra_roxa3 {
+    display: flex;
+    align-items: center;
+  }
+  
+  .redes-sociais,
+  .duvidas-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 50px;
+  }
+  
+  .icones {
+    display: flex;
+    margin-left: -50px;
+    margin-bottom: -6px;
+  }
+  
+  .icones2 {
+    margin-right: -10px;
+  }
+  
+  .icones2 img {
+    width: 50px;
+    height: auto;
+  }
+  
+  .edit-button {
+    margin-top: 0px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #9b53d4;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .edit-button:hover {
+    background-color: #543071; /* Cor de fundo vermelha do botão ao passar o mouse */
+  }
